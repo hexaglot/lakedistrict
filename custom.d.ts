@@ -5,3 +5,8 @@ declare module '*.css' {
   const classNames: IClassNames;
   export = classNames;
 }
+
+declare module '*.html' {
+  const value: string;
+  export default value
+}

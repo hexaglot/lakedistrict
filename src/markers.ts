@@ -1,5 +1,5 @@
 import { } from 'googlemaps';
-import { Venue } from './venueViewModel';
+import { Venue } from './Venue';
 
 export class Markers {
     markers: google.maps.Marker[];

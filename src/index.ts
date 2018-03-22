@@ -3,17 +3,28 @@ import * as style from './styles.css';
 import * as $ from 'jquery';
 import { registerGoogleMaps } from './gmap';
 import { initMap } from './map';
-import { Venue, ViewModel } from './venueViewModel';
-import { applyBindings } from 'knockout';
+import './components/venue-list/venueViewModel';
+import { applyBindings, observableArray, components } from 'knockout';
 import { Markers } from './markers'
+import {Venue} from './Venue';
 
 let t = style.test;
 let map: google.maps.Map;
 let venues: Venue[];
 
-const vm = new ViewModel()
+// const vm = new ViewModel({venues : []});
 let markers: Markers;
 
+class AllViewModel {
+    venues : KnockoutObservable<Venue[]>;
+    visibleVenues : KnockoutObservable<Venue[]>;
+    constructor(){
+        this.venues = observableArray();
+        this.visibleVenues = observableArray();
+    }
+}
+
+let allViewModel : AllViewModel;
 
 //load venue data
 function loadVenueData() {
@@ -39,8 +50,10 @@ createMap.then((map : google.maps.Map) => {
 
     loadVenues.then((venues: Venue[]) => {
         const bounds = new google.maps.LatLngBounds();
+        allViewModel = new AllViewModel();
+
         for (const v of venues) {
-            vm.allVenues.push(v);
+            allViewModel.venues.push(v);
 
             const marker = new google.maps.Marker({
                 map: map,
@@ -65,15 +78,10 @@ createMap.then((map : google.maps.Map) => {
         map.fitBounds(bounds);
 
         //triggger an update of the computed observables now we have loaded the venues
-        vm.searchTerm.valueHasMutated();
+        // vm.searchTerm.valueHasMutated();
         //add the hooks to update the map - these are not managed by Knockout
-        vm.currentVenue.subscribe((venue) => markers.showCurrentMarker(venue));
-        vm.searchTerm.subscribe((term) => markers.showVisibleMarkers(term));
-        applyBindings(vm);
+        // vm.currentVenue.subscribe((venue) => markers.showCurrentMarker(venue));
+        // vm.searchTerm.subscribe((term) => markers.showVisibleMarkers(term));
+        applyBindings(allViewModel);
     });
 });
-
-
-const $search = $(`<input class="search" data-bind="textInput: searchTerm"></input>`)
-const $view = $(`<ul data-bind="foreach: visibleVenues"><li data-bind="text:name, click:$root.setCurrentVenue"></li></ul>`);
-$('#list').append($search).append($view);

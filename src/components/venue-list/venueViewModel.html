@@ -1,0 +1,4 @@
+<input class="search" data-bind="textInput: searchTerm"></input>
+<ul data-bind="foreach: visibleVenues">
+    <li data-bind="text:name, click:$root.setCurrentVenue"></li>
+</ul>
