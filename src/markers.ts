@@ -5,23 +5,34 @@ export class Markers {
     markers: google.maps.Marker[];
     map: google.maps.Map;
 
-    constructor(map : google.maps.Map) {
+    constructor(map: google.maps.Map) {
         this.markers = [];
         this.map = map;
     }
 
-    addMarker(marker : google.maps.Marker) {
+    addMarker(marker: google.maps.Marker) {
         this.markers.push(marker);
     }
-    
-    showCurrentMarker(venue: Venue) {
-        //hide all markers
-        for (const marker of this.markers) {
-            marker.setMap(null);
 
+    showMarker(venue: Venue) {
+        this.hideAllMarkers();
+        for (const marker of this.markers) {
             if (marker.getTitle() === venue.name) {
                 marker.setMap(this.map);
                 this.map.setCenter(marker.getPosition());
+            }
+        }
+    }
+
+    showCurrentMarkers(venues: Venue[]) {
+        //hide all markers
+        for (const marker of this.markers) {
+            marker.setMap(null);
+            for (const venue of venues) {
+                if (marker.getTitle() === venue.name) {
+                    marker.setMap(this.map);
+                    this.map.setCenter(marker.getPosition());
+                }
             }
         }
     }

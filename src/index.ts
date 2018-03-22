@@ -4,7 +4,7 @@ import * as $ from 'jquery';
 import { registerGoogleMaps } from './gmap';
 import { initMap } from './map';
 import './components/venue-list/venueViewModel';
-import { applyBindings, observableArray, components } from 'knockout';
+import { applyBindings, observableArray, components, computed, observable } from 'knockout';
 import { Markers } from './markers'
 import {Venue} from './Venue';
 
@@ -17,10 +17,12 @@ let markers: Markers;
 
 class AllViewModel {
     venues : KnockoutObservable<Venue[]>;
-    visibleVenues : KnockoutObservable<Venue[]>;
+    currentVenue : KnockoutObservable<Venue>;
+    visibleVenues: KnockoutObservableArray<Venue>;
     constructor(){
         this.venues = observableArray();
         this.visibleVenues = observableArray();
+        this.currentVenue = observable();
     }
 }
 
@@ -77,11 +79,9 @@ createMap.then((map : google.maps.Map) => {
         }
         map.fitBounds(bounds);
 
-        //triggger an update of the computed observables now we have loaded the venues
-        // vm.searchTerm.valueHasMutated();
         //add the hooks to update the map - these are not managed by Knockout
-        // vm.currentVenue.subscribe((venue) => markers.showCurrentMarker(venue));
-        // vm.searchTerm.subscribe((term) => markers.showVisibleMarkers(term));
+        allViewModel.visibleVenues.subscribe((venues : Venue[]) => markers.showCurrentMarkers(venues));
+        allViewModel.currentVenue.subscribe((venue : Venue) => markers.showMarker(venue));
         applyBindings(allViewModel);
     });
 });

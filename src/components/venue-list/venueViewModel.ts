@@ -10,20 +10,22 @@ class ViewModel {
     currentVenue: KnockoutObservable<Venue>;
 
     constructor(params: any) {
-        console.log('constructor called!');
         // this.visibleVenues = observableArray();
         this.allVenues = params.venues;
         this.searchTerm = observable();
-        this.currentVenue = observable();
+        this.currentVenue = params.currentVenue;
         this.visibleVenues = computed((): Venue[] => {
             const regex = new RegExp(this.searchTerm());
             const matchingVenues = this.allVenues().filter((v: Venue) => regex.test(v.name));
+            params.visibleVenues.removeAll();
+            for(let v of matchingVenues){
+                params.visibleVenues.push(v);
+            }
             return matchingVenues;
         }, this);
     }
 
     setCurrentVenue = (venue: Venue) => {
-        console.log(this.currentVenue);
         this.currentVenue(venue);
     }
 }
