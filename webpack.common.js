@@ -38,7 +38,10 @@ module.exports = {
             {
               loader: 'typings-for-css-modules-loader',
               options: {
-                sourceMap: true
+                sourceMap: true,
+                modules: true,
+                namedExport: true,
+                camelCase: true
               }
             }]
         })

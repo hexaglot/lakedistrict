@@ -1,11 +1,9 @@
-import * as style from './styles.css';
+import './styles.css';
 import './components/venue-list/venueViewModel';
 import './components/app/appModel';
 import './components/map/map';
 import { applyBindings, observableArray } from 'knockout';
 import { Venue } from './Venue';
-
-let t = style.test;
 
 //load venue data
 const loadVenues = fetch('data/wv.json')
@@ -18,7 +16,7 @@ const loadVenues = fetch('data/wv.json')
 
 const appdata = {
     venues: observableArray()
-}
+};
 
 loadVenues.then((venues: Venue[]) => {
     for (const v of venues) {

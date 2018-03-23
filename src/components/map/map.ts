@@ -4,6 +4,7 @@ import * as $ from 'jquery';
 import { Venue } from '../../Venue'
 import { observable, computed, applyBindings, observableArray, components } from 'knockout';
 import { registerGoogleMaps } from '../../gmap';
+import * as style from './map.css';
 
 export class MapComponent {
     map: google.maps.Map;
@@ -62,7 +63,7 @@ export const viewmodel = {
             return new MapComponent($(componentInfo.element).find('#map').get(0), params);
         }
     },
-    template: `<div id="map"></div`
+    template: `<div class="${style.map}" id="map"></div>`
 };
 
 components.register('map-widget', viewmodel);

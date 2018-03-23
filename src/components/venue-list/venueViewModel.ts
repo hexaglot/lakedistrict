@@ -1,6 +1,8 @@
 import { observable, computed, applyBindings, observableArray, components } from 'knockout';
 import { Venue } from '../../Venue';
-import * as template from './venueViewModel.html'
+import * as template from './venueViewModel.html';
+import * as style from './venueViewModel.css';
+
 
 class ViewModel {
     // visibleVenues: KnockoutObservableArray<Venue>;
@@ -32,5 +34,8 @@ class ViewModel {
 
 components.register('venue-list-widget', {
     viewModel: ViewModel,
-    template: template
+    template: `<input data-bind="textInput: searchTerm"></input>
+<ul class="${style.list}" data-bind="foreach: visibleVenues">
+    <li data-bind="text:name, click:$parent.setCurrentVenue"></li>
+</ul>`
 });
