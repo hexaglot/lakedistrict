@@ -1,18 +1,14 @@
 import { observable, computed, applyBindings, observableArray, components } from 'knockout';
 import { Venue } from '../../Venue';
-import * as template from './venueViewModel.html';
 import * as style from './venueViewModel.css';
 
-
 class ViewModel {
-    // visibleVenues: KnockoutObservableArray<Venue>;
     allVenues: KnockoutComputed<Venue[]>;
     searchTerm: KnockoutObservable<string>;
     visibleVenues: KnockoutComputed<Venue[]>;
     currentVenue: KnockoutObservable<Venue>;
 
     constructor(params: any) {
-        // this.visibleVenues = observableArray();
         this.allVenues = params.venues;
         this.searchTerm = observable();
         this.currentVenue = params.currentVenue;
@@ -20,7 +16,7 @@ class ViewModel {
             const regex = new RegExp(this.searchTerm());
             const matchingVenues = this.allVenues().filter((v: Venue) => regex.test(v.name));
             params.visibleVenues.removeAll();
-            for(let v of matchingVenues){
+            for (let v of matchingVenues) {
                 params.visibleVenues.push(v);
             }
             return matchingVenues;
@@ -34,8 +30,10 @@ class ViewModel {
 
 components.register('venue-list-widget', {
     viewModel: ViewModel,
-    template: `<input data-bind="textInput: searchTerm"></input>
-<ul class="${style.list}" data-bind="foreach: visibleVenues">
-    <li data-bind="text:name, click:$parent.setCurrentVenue"></li>
+    template: `
+<input class="${style.input}" data-bind="textInput: searchTerm"></input>
+    <ul class="${style.list}" data-bind="foreach: visibleVenues">
+    <li data-bind="text:name, click:$parent.setCurrentVenue, css: {'${style.selected}': $parent.currentVenue() === $data}"></li>
 </ul>`
 });
+//selected: $data === $parent.Selected() 

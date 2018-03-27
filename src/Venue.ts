@@ -5,5 +5,7 @@ export interface Venue {
     latlng: google.maps.LatLng,
     location: google.maps.LatLng,
     place_id: string,
-    address: string
+    address: string,
+    foursqaure_name : string, 
+    foursquare_id : string
 }

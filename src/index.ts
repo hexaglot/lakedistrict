@@ -4,6 +4,7 @@ import './components/app/appModel';
 import './components/map/map';
 import { applyBindings, observableArray } from 'knockout';
 import { Venue } from './Venue';
+import * as $ from 'jquery';
 
 //load venue data
 const loadVenues = fetch('data/wv.json')
