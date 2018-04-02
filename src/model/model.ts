@@ -13,14 +13,10 @@ export interface JsonVenue {
     name: string,
     phone: string,
     href: string,
-    latlng: google.maps.LatLng,
     location: google.maps.LatLng,
-    place_id: string,
     address: string,
-    foursqaure_name: string,
+    google_id: string,
     foursquare_id: string,
-    go: any,
-    fs: any,
 }
 
 export class Venue {
@@ -28,16 +24,15 @@ export class Venue {
     phone: string;
     href: string;
     location: google.maps.LatLng;
-    place_id: string;
+    google_id: string;
     address: string;
     foursquare_id: string;
-    photoUrl: KnockoutComputed<string>;
     go: { status: KnockoutObservable<LoadingStatus>, result: KnockoutObservable<google.maps.places.PlaceResult> };
     fs: { status: KnockoutObservable<LoadingStatus>, result: KnockoutObservable<any> };
 
     constructor(json: JsonVenue) {
         this.name = json.name;
-        this.place_id = json.place_id;
+        this.google_id = json.google_id;
         this.foursquare_id = json.foursquare_id;
         this.address = json.address;
         this.phone = json.phone;
@@ -58,7 +53,7 @@ export class Venue {
     }
 
     updateGoogleDetails(map: google.maps.Map) {
-        getPlaceDetails(this.place_id, map).then(result => {
+        getPlaceDetails(this.google_id, map).then(result => {
             this.go.result(<google.maps.places.PlaceResult>result);
             this.go.status(LoadingStatus.loaded);
         }).catch(() => {

@@ -15,7 +15,5 @@ Todo:
  -- read through remove old code and cleanup variables, remove logging lines
  -- clear up gmaps.ts?
  -- Sort tablet mode
- -- host on github
- -- filter json
  -- comments, write readme
  -- Add rule for copying files to dist - use for data files, images?
