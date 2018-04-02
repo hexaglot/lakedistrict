@@ -36,7 +36,28 @@ module.exports = {
               }
             }]
         })
-      }
+      },
+      {
+        test: /\.less$/,
+        use: extractCss.extract({
+          use: [
+            {
+              loader: 'typings-for-css-modules-loader',
+              options: {
+                sourceMap: true,
+                modules: true,
+                namedExport: true,
+                camelCase: true
+              }
+            },
+            {
+              loader: "less-loader", options: {
+                strictMath: true,
+                noIeCompat: true
+              }
+            }]
+        })
+      },
     ]
   },
   resolve: {

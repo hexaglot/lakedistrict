@@ -1,6 +1,6 @@
 import { observableArray, components, observable, computed } from 'knockout';
 import { Venue } from '../../model/model';
-import * as style from './appModel.css'
+import * as style from './appModel.less'
 
 class AllViewModel {
     venues: KnockoutObservable<Venue[]>;

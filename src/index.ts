@@ -1,4 +1,4 @@
-import './styles.css';
+import './styles.less';
 import './components/venue-list/venueViewModel';
 import './components/app/appModel';
 import './components/overlay/overlay';

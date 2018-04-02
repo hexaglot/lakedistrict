@@ -1,6 +1,6 @@
 import { observable, computed, applyBindings, observableArray, components } from 'knockout';
 import { Venue, LoadingStatus } from '../../model/model';
-import * as style from './overlay.css';
+import * as style from './overlay.less';
 
 
 class ViewModel {

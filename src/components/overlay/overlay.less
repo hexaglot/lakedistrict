@@ -1,5 +1,7 @@
+@import "../shared.less";
+
 .container {
-    composes : f5 from "../shared.css";
+    composes : f5 from "../shared.less";
     transition: transform, 0.2s;
     width: 100%;
 }
@@ -47,7 +49,7 @@
 }
 
 .title {
-    composes : f3 from "../shared.css";
+    composes : f3 from "../shared.less";
     margin : 0;
     padding : 0;
     font-weight: 600;
@@ -55,20 +57,20 @@
 }
 
 .website {
-    composes : f4 from "../shared.css";
+    composes : f4 from "../shared.less";
 }
 
 .phone {
-    composes : f6 from "../shared.css";
+    composes : f6 from "../shared.less";
 }
 
 .address {
-    composes : f6 from "../shared.css";
+    composes : f6 from "../shared.less";
     font-style: oblique;
 }
 
 .tips {
-    composes : f6 from "../shared.css";
+    composes : f6 from "../shared.less";
     max-height: 6rem;
     overflow-y: auto;
     list-style: none;
@@ -80,7 +82,7 @@
 }
 
 .tipsTitle {
-    composes : f6 from "../shared.css";
+    composes : f6 from "../shared.less";
     padding-top: 1rem;
 }
 
@@ -100,7 +102,7 @@
     font-weight: bold;
 }
 
-@media only screen and (min-width : 480px) {
+@media @notsmall {
     .container {
         max-width: 30rem;
     }

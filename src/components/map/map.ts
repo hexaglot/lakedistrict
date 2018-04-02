@@ -4,7 +4,7 @@ import * as $ from 'jquery';
 import { Venue } from '../../model/model'
 import { observable, computed, observableArray, components } from 'knockout';
 import { loadGoogleMapsAPI } from '../../services/gmap';
-import * as style from './map.css';
+import * as style from './map.less';
 
 interface String_Marker {
     //association between venues name and markers

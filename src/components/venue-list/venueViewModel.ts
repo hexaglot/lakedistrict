@@ -1,6 +1,6 @@
 import { observable, computed, applyBindings, observableArray, components } from 'knockout';
 import { Venue } from '../../model/model';
-import * as style from './venueViewModel.css';
+import * as style from './venueViewModel.less';
 
 class ViewModel {
     searchTerm: KnockoutObservable<string>;
@@ -26,7 +26,7 @@ components.register('venue-list-widget', {
         <input class="${style.input}" data-bind="textInput: searchTerm" type="text" placeholder="Search"></input>
     </div>
    
-    <div class="${style.listContainer}">
+    <div>
         <!-- ko if: visibleVenues().length > 0 -->
             <ul class="${style.list}" data-bind="foreach: visibleVenues">
                 <li class="${style.item}" data-bind="text:name, click:$parent.setCurrentVenue, css: {'${style.selected}': $parent.currentVenue() === $data}"></li>
