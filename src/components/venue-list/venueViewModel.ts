@@ -26,15 +26,13 @@ components.register('venue-list-widget', {
         <input class="${style.input}" data-bind="textInput: searchTerm" type="text" placeholder="Search"></input>
     </div>
    
-    <div>
-        <!-- ko if: visibleVenues().length > 0 -->
-            <ul class="${style.list}" data-bind="foreach: visibleVenues">
-                <li class="${style.item}" data-bind="text:name, click:$parent.setCurrentVenue, css: {'${style.selected}': $parent.currentVenue() === $data}"></li>
-            </ul>
-            <!-- /ko -->
-            <!-- ko if: !visibleVenues().length -->
-                <div class="${style.noneMatch}">No Venues Match Filter</div>
-            <!-- /ko -->
-    </div>
+    <!-- ko if: visibleVenues().length > 0 -->
+    <ul class="${style.list}" data-bind="foreach: visibleVenues">
+        <li class="${style.item}" data-bind="text:name, click:$parent.setCurrentVenue, css: {'${style.selected}': $parent.currentVenue() === $data}"></li>
+    </ul>
+    <!-- /ko -->
+    <!-- ko if: !visibleVenues().length -->
+        <div class="${style.noneMatch}">No Venues Match Filter</div>
+    <!-- /ko -->
 </div>`
 });

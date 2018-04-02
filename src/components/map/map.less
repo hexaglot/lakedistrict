@@ -5,12 +5,6 @@
     height : 100%;
 }
 
-.popup {
-    font-size: 1.5rem;
-    text-align: center;
-}
-
-
 .container {
     display: flex;
     justify-content: center;
@@ -21,14 +15,13 @@
     bottom : 0;
     right : 0;
 
-}
+    &.open {
+        transform : translateY(0);
+    }
 
-.container.open {
-    transform : translateY(0);
-}
-
-@media @notsmall {
-    .container {
-        max-width: 30rem;
+    @media @notsmall {
+            max-width: 30rem;
     }
 }
+
+

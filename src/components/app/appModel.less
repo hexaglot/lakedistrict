@@ -7,82 +7,74 @@
     display : flex;
     flex: 1 1 auto;
     flex-direction: column;
-}
 
-.inner-window{
-    height : 80%;
-    position: relative;
-    flex : 1;
-}
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding : 0.5rem;
 
-.map-container {
-    width : 100%;
-    height : 100%
-}
+        @media @big {
+            display : none;
+        }
 
-.menu-button {
-    composes : button from "../shared.less";
-    composes : hamburger-icon from "../shared.less";
-}
+        .title {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
 
-/*TODO: May be a better way to do this - cant compose with multiple classes in selector*/
-.menu-button.open {
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96"><path d="M11.313 0L0 11.314 36.686 48 0 84.686 11.313 96 48 59.312 84.688 96 96 84.686 59.314 48 96 11.314 84.687 0 48 36.688 11.312 0z"/></svg>');
-}
-
-.title {
-    font-size: 1.5rem;
-    font-weight: 600;
-}
-
-.list-container.open {
-    transform: translateX(0);
-}
-
-.list-container {
-    transform: translateX(-110%);
-    width: 100%;
-    top : 0;
-    left : 0;
-    background-color: #fff;
-    overflow-y: auto;
-    position: absolute;
-    transition: transform, 0.2s;
-    height : 100%;
-    margin : 0;
-    padding : 0;
-}
-
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding : 0.5rem;
-}
-
-@media @notsmall {
-    .list-container {
-        transform: translateX(0);
-        top : 1rem;
-        left : 1rem;
-        bottom: 1rem;
-        max-width : 20rem;
-        width : auto;
-        height : auto;
-    }
-
-    .menu-button {
-        display : none;
+        .menu-button {
+            .button;
+            .hamburger-icon;
+            &.open {
+                .cross-icon;
+            }
+        }
     }
     
-    .nav {
-        display : none;
+    .inner-window {
+        height : 80%;
+        position: relative;
+        flex : 1;
+
+        .map-container {
+            width : 100%;
+            height : 100%
+        }
+
+        .list-container {
+            transform: translateX(-110%);
+            width: 100%;
+            top : 0;
+            left : 0;
+            background-color: #fff;
+            overflow-y: auto;
+            position: absolute;
+            transition: transform, 0.2s;
+            height : 100%;
+            margin : 0;
+            padding : 0;
+
+            &.open {
+                transform: translateX(0);
+            }
+
+            @media @big {
+                transform: translateX(0);
+                top : 1rem;
+                left : 1rem;
+                bottom: 1rem;
+                max-width : 20rem;
+                width : auto;
+                height : auto;
+            }
+        }
     }
 }
 
 .loadingFailed {
     display: inline;
     margin: 2rem auto;
-    font-size: 2rem;
+    .huge-txt;
     text-align: center;
 }

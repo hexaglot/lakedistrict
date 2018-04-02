@@ -7,6 +7,5 @@ const base_url = 'https://api.foursquare.com/v2/';
 
 export function foursquare_details(foursquare_id: string): Promise<any> {
     const url = `${base_url}venues/${foursquare_id}?client_id=${client_id}&client_secret=${client_secret}&v=${v}`;
-
     return  Promise.resolve($.getJSON(url));
 }

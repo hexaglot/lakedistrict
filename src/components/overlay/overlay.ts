@@ -51,16 +51,18 @@ components.register('overlay-widget', {
             <div data-bind="with: fs.result">
                 <div data-bind="with: response.venue">
                 <!-- ko if: tips.count > 0 -->
-                    <div class="${style.tipsTitle}"><a data-bind="attr: {href : canonicalUrl}">FourSquare Tips:</a></div>
+                    <div class="${style.fs_tips}">
+                        <div class="${style.tipsTitle}"><a data-bind="attr: {href : canonicalUrl}">FourSquare Tips:</a></div>
 
-                    <ul class="${style.tips}" data-bind="foreach: tips.groups">
-                    <!-- ko foreach: $data.items -->
-                            <li class="${style.tip}">
-                                <span class=${style.tipsQuote} data-bind="text: $data.text"></span>
-                                <span class="${style.tipsName}" data-bind="text: $data.user.firstName + ' ' + $data.user.lastName"></span>
-                            </li>
-                        <!-- /ko -->
-                    </ul>
+                        <ul class="${style.tips}" data-bind="foreach: tips.groups">
+                        <!-- ko foreach: $data.items -->
+                                <li class="${style.tip}">
+                                    <span class=${style.tipsQuote} data-bind="text: $data.text"></span>
+                                    <span class="${style.tipsName}" data-bind="text: $data.user.firstName + ' ' + $data.user.lastName"></span>
+                                </li>
+                            <!-- /ko -->
+                        </ul>
+                    </div>
                 <!-- /ko -->
                 </div>
             </div>
