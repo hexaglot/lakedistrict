@@ -8,12 +8,6 @@ http://mapshaper.org/ to simplify
 Todo:
  -- add image to use when nothing returned by google maps
  -- Display some warning/indication that things havent loaded
- -- Update the css loading process to use sass/less?
- -- clear up the package.json to remove uneeded things
  -- add linting
- -- clean up the css and layout code
- -- read through remove old code and cleanup variables, remove logging lines
  -- clear up gmaps.ts?
- -- Sort tablet mode
  -- comments, write readme
- -- Add rule for copying files to dist - use for data files, images?

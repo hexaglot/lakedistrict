@@ -1,38 +1,40 @@
-import * as $ from 'jquery';
+import * as $ from "jquery";
 
-const key = 'AIzaSyBdrDGYzK48wAwoDe7MwwKpGxGJZ6c2jqE';
-//return a promise which resolves when google maps is loaded
+const KEY = "AIzaSyBdrDGYzK48wAwoDe7MwwKpGxGJZ6c2jqE";
+// return a promise which resolves when google maps is loaded
 export function loadGoogleMapsAPI() {
-    let p = new Promise((resolve, reject) => {
+    const promise = new Promise((resolve, reject) => {
         (window as any).googleMapCallback = () => resolve();
-        const version = 3;
-        const cb_name = 'googleMapCallback';
-        const libraries = 'places';
-        const baseUrl = `https://maps.googleapis.com/maps/api/`
-        const gmapUrl = `${baseUrl}js?v=${version}&key=${key}&callback=${cb_name}&libraries=${libraries}`
+        const VERSION = 3;
+        const CB_NAME = "googleMapCallback";
+        const LIBRARIES = "places";
+        const BASEURL = "https://maps.googleapis.com/maps/api/";
+        const GMAP_URL = `${BASEURL}js?v=${VERSION}&key=${KEY}&callback=${CB_NAME}&libraries=${LIBRARIES}`;
         const $gmapScript = $('<script async defer type="text/javascript"></script>');
-        $gmapScript.attr('src', gmapUrl);
-        $('body').append($gmapScript)
+        $gmapScript.attr("src", GMAP_URL);
+        $("body").append($gmapScript);
     });
 
-    return p;
+    return promise;
 }
 
 export function streetView({ lat, lng }: google.maps.LatLng, options?: any): string {
-    return `https://maps.googleapis.com/maps/api/streetview?size=600x300&location=${lat()},${lng()}&key=${key}`;
+    return `https://maps.googleapis.com/maps/api/streetview?size=600x300&location=${lat()},${lng()}&key=${KEY}`;
 }
 
-export function getPlaceDetails(placeId : string, map: google.maps.Map) {
-    let service = new google.maps.places.PlacesService(map);
+export function getPlaceDetails(placeId: string, map: google.maps.Map) {
+    const service = new google.maps.places.PlacesService(map);
     return new Promise((resolve, reject) => {
-        let callback = (place: google.maps.places.PlaceResult, status: google.maps.places.PlacesServiceStatus): void => {
-            if (status == google.maps.places.PlacesServiceStatus.OK) {
+        const callback = (
+            place: google.maps.places.PlaceResult,
+            status: google.maps.places.PlacesServiceStatus): void => {
+            if (status === google.maps.places.PlacesServiceStatus.OK) {
                 resolve(place);
             } else {
                 reject("No Google Maps! " + status.toString());
             }
-        }
+        };
 
-        service.getDetails({ placeId: placeId }, callback);
+        service.getDetails({ placeId }, callback);
     });
 }

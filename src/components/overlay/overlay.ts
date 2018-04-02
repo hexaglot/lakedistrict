@@ -1,24 +1,22 @@
-import { observable, computed, applyBindings, observableArray, components } from 'knockout';
-import { Venue, LoadingStatus } from '../../model/model';
-import * as style from './overlay.less';
-
+import {  applyBindings, components, computed, observable, observableArray } from "knockout";
+import { LoadingStatus, Venue } from "../../model/venue";
+import * as style from "./overlay.less";
 
 class ViewModel {
-    venue: KnockoutObservable<Venue>;
-    visible : KnockoutObservable<boolean>;
+    public venue: KnockoutObservable<Venue>;
+    public visible: KnockoutObservable<boolean>;
 
     constructor(params: any) {
         this.venue = params.venue;
         this.visible = params.visible;
     }
 
-    toggleVisible() {
+    public toggleVisible() {
         this.visible(!this.visible());
     }
 }
 
-components.register('overlay-widget', {
-    viewModel: ViewModel,
+components.register("overlay-widget", {
     template: `
     <div class="${style.container}" data-bind="css: {'${style.open}': visible()}, with: venue">
         <div class="${style.inner}">
@@ -69,5 +67,6 @@ components.register('overlay-widget', {
             <!-- /ko -->
         </div>
 </div>
-`
+`,
+    viewModel: ViewModel,
 });

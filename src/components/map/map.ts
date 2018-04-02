@@ -1,25 +1,24 @@
-import { } from 'googlemaps';
-// import { Markers } from './markers';
-import * as $ from 'jquery';
-import { Venue } from '../../model/model'
-import { observable, computed, observableArray, components } from 'knockout';
-import { loadGoogleMapsAPI } from '../../services/gmap';
-import * as style from './map.less';
+import { } from "googlemaps";
+import * as $ from "jquery";
+import { components, computed, observable, observableArray } from "knockout";
+import { Venue } from "../../model/venue";
+import { loadGoogleMapsAPI } from "../../services/gmap";
+import * as style from "./map.less";
 
-interface String_Marker {
-    //association between venues name and markers
+interface IStringMarker {
+    // association between venues name and markers
     [index: string]: google.maps.Marker;
 }
 
 class MapComponent {
-    map: google.maps.Map;
-    markers: String_Marker;
-    venues: Venue[];
-    visibleVenues: KnockoutObservableArray<Venue>;
-    currentVenue: KnockoutObservable<Venue>;
-    overlayVisible: KnockoutObservable<boolean>;
-    currentVenueMatching: KnockoutObservable<boolean>;
-    notVisibleVenues: KnockoutComputed<Venue[]>;
+    public map: google.maps.Map;
+    public markers: IStringMarker;
+    public venues: Venue[];
+    public visibleVenues: KnockoutObservableArray<Venue>;
+    public currentVenue: KnockoutObservable<Venue>;
+    public overlayVisible: KnockoutObservable<boolean>;
+    public currentVenueMatching: KnockoutObservable<boolean>;
+    public notVisibleVenues: KnockoutComputed<Venue[]>;
 
     constructor(element: HTMLElement, params: any) {
         this.venues = params.venues;
@@ -31,31 +30,28 @@ class MapComponent {
 
         loadGoogleMapsAPI().then(() => {
             this.map = new google.maps.Map(element, {
-                mapTypeControl: false,
-                mapTypeId: 'terrain',
                 fullscreenControl: false,
-                zoomControl: true,
-                zoomControlOptions: {
-                    position: google.maps.ControlPosition.RIGHT_TOP
-                },
+                mapTypeControl: false,
+                mapTypeId: "terrain",
                 streetViewControl: true,
                 streetViewControlOptions: {
-                    position: google.maps.ControlPosition.TOP_RIGHT
+                    position: google.maps.ControlPosition.TOP_RIGHT,
                 },
-                ...params.options
+                zoomControl: true,
+                zoomControlOptions: {
+                    position: google.maps.ControlPosition.RIGHT_TOP,
+                },
+                ...params.options,
             });
 
-            const overlay = document.getElementById('overlay');
+            const overlay = document.getElementById("overlay");
 
-            // if (overlay) {
-            //     overlay.remove();
-            //     this.map.controls[google.maps.ControlPosition.BOTTOM_RIGHT].push(overlay);
-            // }
-
+            // uncomment this line for a border round the national park
             // this.map.data.loadGeoJson('data/lakes.geojson');
+
             this.map.data.setStyle({
-                fillColor: 'lightgray',
-                strokeWeight: 0
+                fillColor: "lightgray",
+                strokeWeight: 0,
             });
 
             this.markers = {};
@@ -64,8 +60,8 @@ class MapComponent {
                 this.addVenueMarker(venue.name, venue.location, venue.href);
             }
 
-            //add the hooks to update the map - these are not managed by Knockout
-            //if the visible venues change
+            // add the hooks to update the map - these are not managed by Knockout
+            // if the visible venues change
             this.currentVenueMatching.subscribe((matching: boolean) => {
                 if (!matching) {
                     this.clearHighlights();
@@ -74,7 +70,7 @@ class MapComponent {
             });
 
             this.notVisibleVenues.subscribe((venues: Venue[]) => {
-                for (let venue of venues) {
+                for (const venue of venues) {
                     this.markers[venue.name].setAnimation(null);
                     this.markers[venue.name].setMap(null);
                 }
@@ -82,7 +78,7 @@ class MapComponent {
 
             this.visibleVenues.subscribe((venues: Venue[]) => {
                 if (venues.length > 0) {
-                    for (let venue of venues) {
+                    for (const venue of venues) {
                         const marker = this.markers[venue.name];
                         if (!marker.getMap()) {
                             marker.setMap(this.map);
@@ -90,13 +86,13 @@ class MapComponent {
                     }
                     this.map.fitBounds(this.calculate_bounds());
                 } else {
-                    //there are no venues which match
+                    // there are no venues which match
                     this.map.setCenter(new google.maps.LatLng(54.448906, -3.088366));
                     this.map.setZoom(8);
                 }
             });
 
-            //if the currentVenue changes
+            // if the currentVenue changes
             this.currentVenue.subscribe((venue: Venue) => {
                 if (venue) {
                     this.map.setCenter(venue.location);
@@ -106,7 +102,7 @@ class MapComponent {
                     venue.updateGoogleDetails(this.map);
                     this.overlayVisible(true);
                 } else {
-                    //currentVenue is null
+                    // currentVenue is null
                     this.clearHighlights();
                     this.overlayVisible(false);
                 }
@@ -114,15 +110,15 @@ class MapComponent {
         });
     }
 
-    addVenueMarker(name: string, location: google.maps.LatLng, href: string): google.maps.Marker {
+    public addVenueMarker(name: string, location: google.maps.LatLng, href: string): google.maps.Marker {
         const marker = new google.maps.Marker({
+            animation: google.maps.Animation.DROP,
             map: this.map,
             position: location,
             title: name,
-            animation: google.maps.Animation.DROP,
         });
 
-        marker.addListener('click', () => {
+        marker.addListener("click", () => {
             for (const v of this.venues) {
                 if (v.name === name) {
                     this.currentVenue(v);
@@ -135,14 +131,17 @@ class MapComponent {
         return marker;
     }
 
-    clearHighlights() {
-        for (let name in this.markers) {
-            this.markers[name].setAnimation(null);
+    public clearHighlights() {
+        for (const name in this.markers) {
+            if (this.markers[name]) {
+                this.markers[name].setAnimation(null);
+            }
         }
     }
-    calculate_bounds(): google.maps.LatLngBounds {
+
+    public calculate_bounds(): google.maps.LatLngBounds {
         const bounds = new google.maps.LatLngBounds();
-        for (let name in this.markers) {
+        for (const name in this.markers) {
             if (this.markers[name].getMap()) {
                 bounds.extend(this.markers[name].getPosition());
             }
@@ -153,16 +152,15 @@ class MapComponent {
 }
 
 export const viewmodel = {
-    viewModel: {
-        createViewModel: function (params: any, componentInfo: any) {
-            return new MapComponent($(componentInfo.element).find('#map').get(0), params);
-        }
-    },
     template: `
-    <div class="${style.map}" id="map"></div>
-    <overlay-widget id="overlay" class="${style.container}" data-bind="css: {'${style.open}': overlayVisible()}" params="venue : currentVenue, visible : overlayVisible"></overlay-widget>
-    `
+<div class="${style.map}" id="map"></div>
+<overlay-widget id="overlay" class="${style.container}" data-bind="css: {'${style.open}': overlayVisible()}" params="venue : currentVenue, visible : overlayVisible"></overlay-widget>
+    `,
+    viewModel: {
+        createViewModel: (params: any, componentInfo: any) => {
+            return new MapComponent($(componentInfo.element).find("#map").get(0), params);
+        },
+    },
 };
 
-components.register('map-widget', viewmodel);
-
+components.register("map-widget", viewmodel);

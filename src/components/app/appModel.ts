@@ -1,39 +1,39 @@
-import { observableArray, components, observable, computed } from 'knockout';
-import { Venue } from '../../model/model';
-import * as style from './appModel.less'
+import { components, computed, observable, observableArray } from "knockout";
+import { Venue } from "../../model/venue";
+import * as style from "./appModel.less";
 
 class AllViewModel {
-    venues: KnockoutObservable<Venue[]>;
+    public venues: KnockoutObservable<Venue[]>;
 
-    currentVenue: KnockoutObservable<Venue>;
-    visibleVenues: KnockoutComputed<Venue[]>;
-    notVisibleVenues: KnockoutComputed<Venue[]>;
-    searchTerm: KnockoutObservable<string>;
-    menuOpen: KnockoutObservable<boolean>;
-    status: KnockoutObservable<any>;
-    currentVenueMatching: KnockoutObservable<boolean>;
+    public currentVenue: KnockoutObservable<Venue>;
+    public visibleVenues: KnockoutComputed<Venue[]>;
+    public notVisibleVenues: KnockoutComputed<Venue[]>;
+    public searchTerm: KnockoutObservable<string>;
+    public menuOpen: KnockoutObservable<boolean>;
+    public status: KnockoutObservable<any>;
+    public currentVenueMatching: KnockoutObservable<boolean>;
 
     constructor(params: any) {
         this.venues = params.venues;
         this.status = params.status;
         this.searchTerm = observable();
         this.visibleVenues = computed(() => {
-            const regex = new RegExp(this.searchTerm(), 'i');
+            const regex = new RegExp(this.searchTerm(), "i");
             return this.venues().filter((v: Venue) => regex.test(v.name));
         });
 
         this.notVisibleVenues = computed(() => {
-            const regex = new RegExp(this.searchTerm(), 'i');
+            const regex = new RegExp(this.searchTerm(), "i");
             return this.venues().filter((v: Venue) => !regex.test(v.name));
         });
-        
+
         this.currentVenue = observable();
         this.menuOpen = observable(false);
 
         this.currentVenueMatching = computed(() => {
-            //returns true if currentVenue is in matchingVenues
+            // returns true if currentVenue is in matchingVenues
             if (this.currentVenue()) {
-                for (let v of this.visibleVenues()) {
+                for (const v of this.visibleVenues()) {
                     if (v.name === this.currentVenue().name) {
                         return true;
                     }
@@ -49,12 +49,18 @@ class AllViewModel {
         });
     }
 
-    toggleMenu() {
+    public toggleMenu() {
         this.menuOpen(!this.menuOpen());
     }
 }
-const params = `venues : venues, visibleVenues : visibleVenues, currentVenue : currentVenue, currentVenueMatching : currentVenueMatching, searchTerm : searchTerm, notVisibleVenues : notVisibleVenues`;
-const template = `
+const childParams = `venues : venues,
+                    visibleVenues : visibleVenues,
+                    currentVenue : currentVenue,
+                    currentVenueMatching : currentVenueMatching,
+                    searchTerm : searchTerm,
+                    notVisibleVenues : notVisibleVenues`;
+
+const html = `
 <!-- ko if: status() != 'failed' -->
 <div class="${style.appContainer}">
     <nav class="${style.nav}">
@@ -63,10 +69,10 @@ const template = `
     </nav>
     <div class="${style.innerWindow}" data-bind="if: status() == 'loaded'">
         <div class="${style.mapContainer}">
-            <map-widget params="${params}"></map-widget>
+            <map-widget params="${childParams}"></map-widget>
         </div>
         <div class="${style.listContainer}" data-bind="css: {'${style.open}': menuOpen()}">
-            <venue-list-widget params="${params}"></venue-list-widget>
+            <venue-list-widget params="${childParams}"></venue-list-widget>
         </div>
     </div>
 </div>
@@ -78,7 +84,7 @@ const template = `
 <!-- /ko -->
 `;
 
-components.register('app-widget', {
+components.register("app-widget", {
+    template: html,
     viewModel: AllViewModel,
-    template: template
 });
