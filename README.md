@@ -6,7 +6,7 @@ http://mapshaper.org/ to simplify
 
 Todo:
  -- add image to use when nothing returned by google maps
- -- Display some warning/indication that things havent loaded
+ -- Display some warning/indication that things haven't loaded
  -- clear up gmaps.ts?
  -- comments, write readme
 
