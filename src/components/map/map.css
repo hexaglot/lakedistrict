@@ -7,3 +7,26 @@
     font-size: 1.5rem;
     text-align: center;
 }
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    transform: translateY(1000px);
+    transition: transform, 0.2s;
+    width: 100%;
+    position : absolute;
+    bottom : 0;
+    right : 0;
+
+}
+
+.container.open {
+    transform : translateY(0);
+}
+
+@media only screen and (min-width : 480px) {
+    .container {
+        max-width: 30rem;
+    }
+}

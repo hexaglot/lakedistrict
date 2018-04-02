@@ -2,6 +2,15 @@
     width : 100%;
     height : 100%;
     position: relative;
+    display : flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+}
+
+.inner-window{
+    height : 80%;
+    position: relative;
+    flex : 1;
 }
 
 .map-container {
@@ -9,27 +18,19 @@
     height : 100%
 }
 
-.button-container {
-    position: absolute;
-    top : 1rem;
-    right : 1rem;
-    z-index: 2;
-}
-
 .menu-button {
-    font-size : 1.5rem;
+    composes : button from "../shared.css";
+    composes : hamburger-icon from "../shared.css";
 }
 
-.list-container {
-    background-color: #fff;
-    overflow-y: scroll;
-    position: absolute;
-    transition: transform, 0.2s;
-    height : 100%;
+/*TODO: May be a better way to do this - cant compose with multiple classes in selector*/
+.menu-button.open {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96"><path d="M11.313 0L0 11.314 36.686 48 0 84.686 11.313 96 48 59.312 84.688 96 96 84.686 59.314 48 96 11.314 84.687 0 48 36.688 11.312 0z"/></svg>');
 }
 
-.open {
-
+.title {
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 .list-container.open {
@@ -41,6 +42,20 @@
     width: 100%;
     top : 0;
     left : 0;
+    background-color: #fff;
+    overflow-y: auto;
+    position: absolute;
+    transition: transform, 0.2s;
+    height : 100%;
+    margin : 0;
+    padding : 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding : 0.5rem;
 }
 
 @media only screen and (min-width : 480px) {
@@ -57,4 +72,15 @@
     .menu-button {
         display : none;
     }
+    
+    .nav {
+        display : none;
+    }
+}
+
+.loadingFailed {
+    display: inline;
+    margin: 2rem auto;
+    font-size: 2rem;
+    text-align: center;
 }

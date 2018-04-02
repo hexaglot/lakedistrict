@@ -19,19 +19,19 @@ export class Markers {
         this.markers[index] = marker;
     }
 
-    showMarker(index: string) {
-        // this.hideAllMarkers();
+    highlightMarker(index: string) {
         if (index) {
+            this.clearHighlight();
             let marker: google.maps.Marker = this.markers[index];
-
-            for (let name in this.markers) {
-                this.markers[name].setAnimation(null);
-            }
             marker.setAnimation(google.maps.Animation.BOUNCE)
-            marker.setMap(this.map);
             this.map.setCenter(this.markers[index].getPosition());
         }
+    }
 
+    clearHighlight() {
+        for(let name in this.markers) {
+            this.markers[name].setAnimation(null);
+        }
     }
 
     showCurrentMarkers(indexes: string[]) {
@@ -44,6 +44,7 @@ export class Markers {
 
     hideAllMarkers() {
         for (const index in this.markers) {
+            // this.markers[index].setAnimation(null);
             this.markers[index].setMap(null);
         }
 

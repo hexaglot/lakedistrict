@@ -1,62 +1,116 @@
 import { } from 'googlemaps';
-import { Markers } from './markers';
+// import { Markers } from './markers';
 import * as $ from 'jquery';
-import { Venue } from '../../Venue'
+import { Venue } from '../../model/model'
 import { observable, computed, observableArray, components } from 'knockout';
-import { registerGoogleMaps, streetView } from '../../gmap';
+import { loadGoogleMapsAPI } from '../../services/gmap';
 import * as style from './map.css';
-import { foursquare_details } from '../../foursquare';
 
-export class MapComponent {
+interface String_Marker {
+    //association between venues name and markers
+    [index: string]: google.maps.Marker;
+}
+
+class MapComponent {
     map: google.maps.Map;
-    markers: Markers;
+    markers: String_Marker;
     venues: Venue[];
-    visibleVenues: KnockoutObservableArray<Venue[]>;
+    visibleVenues: KnockoutObservableArray<Venue>;
     currentVenue: KnockoutObservable<Venue>;
-    infoWindow: google.maps.InfoWindow;
+    overlayVisible: KnockoutObservable<boolean>;
+    currentVenueMatching: KnockoutObservable<boolean>;
+    notVisibleVenues: KnockoutComputed<Venue[]>;
 
     constructor(element: HTMLElement, params: any) {
         this.venues = params.venues;
         this.visibleVenues = params.visibleVenues;
         this.currentVenue = params.currentVenue;
+        this.currentVenueMatching = params.currentVenueMatching;
+        this.overlayVisible = observable(false);
+        this.notVisibleVenues = params.notVisibleVenues;
 
-        const loadGoogleMaps = registerGoogleMaps();
-        loadGoogleMaps.then(() => {
+        loadGoogleMapsAPI().then(() => {
             this.map = new google.maps.Map(element, {
                 mapTypeControl: false,
                 mapTypeId: 'terrain',
-                ...params.options});
-            
+                fullscreenControl: false,
+                zoomControl: true,
+                zoomControlOptions: {
+                    position: google.maps.ControlPosition.RIGHT_TOP
+                },
+                streetViewControl: true,
+                streetViewControlOptions: {
+                    position: google.maps.ControlPosition.TOP_RIGHT
+                },
+                ...params.options
+            });
+
+            const overlay = document.getElementById('overlay');
+
+            // if (overlay) {
+            //     overlay.remove();
+            //     this.map.controls[google.maps.ControlPosition.BOTTOM_RIGHT].push(overlay);
+            // }
+
             // this.map.data.loadGeoJson('data/lakes.geojson');
             this.map.data.setStyle({
                 fillColor: 'lightgray',
                 strokeWeight: 0
             });
 
-            this.markers = new Markers(this.map);
-
+            this.markers = {};
             this.venues = params.venues();
             for (const venue of this.venues) {
                 this.addVenueMarker(venue.name, venue.location, venue.href);
             }
 
             //add the hooks to update the map - these are not managed by Knockout
-            params.visibleVenues.subscribe((venues: Venue[]) => {
-                this.markers.showCurrentMarkers(venues.map(v => v.name));
-                this.map.fitBounds(this.markers.calculate_bounds());
-            });
-            params.currentVenue.subscribe((venue: Venue) => {
-                if (this.infoWindow) {
-                    this.infoWindow.close();
+            //if the visible venues change
+            this.currentVenueMatching.subscribe((matching: boolean) => {
+                if (!matching) {
+                    this.clearHighlights();
+                    this.currentVenue(null);
                 }
-                this.markers.showMarker(venue.name);
-                this.createInfoWindow(venue).then((infoWindow) => {
-                    this.infoWindow = infoWindow;
-                    infoWindow.open(this.map, this.markers.markers[venue.name])
-                })//.catch(err => console.log('Offline? ' + err));
-
             });
 
+            this.notVisibleVenues.subscribe((venues: Venue[]) => {
+                for (let venue of venues) {
+                    this.markers[venue.name].setAnimation(null);
+                    this.markers[venue.name].setMap(null);
+                }
+            });
+
+            this.visibleVenues.subscribe((venues: Venue[]) => {
+                if (venues.length > 0) {
+                    for (let venue of venues) {
+                        const marker = this.markers[venue.name];
+                        if (!marker.getMap()) {
+                            marker.setMap(this.map);
+                        }
+                    }
+                    this.map.fitBounds(this.calculate_bounds());
+                } else {
+                    //there are no venues which match
+                    this.map.setCenter(new google.maps.LatLng(54.448906, -3.088366));
+                    this.map.setZoom(8);
+                }
+            });
+
+            //if the currentVenue changes
+            this.currentVenue.subscribe((venue: Venue) => {
+                if (venue) {
+                    this.map.setCenter(venue.location);
+                    this.clearHighlights();
+                    this.markers[venue.name].setMap(this.map);
+                    this.markers[venue.name].setAnimation(google.maps.Animation.BOUNCE);
+                    venue.updateGoogleDetails(this.map);
+                    this.overlayVisible(true);
+                } else {
+                    //currentVenue is null
+                    this.clearHighlights();
+                    this.overlayVisible(false);
+                }
+            });
         });
     }
 
@@ -69,45 +123,32 @@ export class MapComponent {
         });
 
         marker.addListener('click', () => {
-            let venue: Venue;
             for (const v of this.venues) {
                 if (v.name === name) {
-                    venue = v;
+                    this.currentVenue(v);
                 }
             }
-            this.currentVenue(venue);
         });
 
-        this.markers.addMarker(name, marker);
-        this.map.fitBounds(this.markers.calculate_bounds());
+        this.markers[name] = marker;
+        this.map.fitBounds(this.calculate_bounds());
         return marker;
     }
 
-    createInfoWindow(venue: Venue): Promise<google.maps.InfoWindow> {
-        let infoWindow: google.maps.InfoWindow;
-        let service = new google.maps.places.PlacesService(this.map);
-        const placeId = venue.place_id;
-        let fs: any;
-
-        fs = venue.foursquare_id ? foursquare_details(venue.foursquare_id) : Promise.resolve({});
-
-        let p: Promise<google.maps.places.PlaceResult> = new Promise((resolve, reject) => {
-            let callback = (place: google.maps.places.PlaceResult, status: google.maps.places.PlacesServiceStatus): void => {
-                if (status == google.maps.places.PlacesServiceStatus.OK) {
-                    resolve(place);
-                } else {
-                    throw Error("No Google Maps! " + status.toString());
-                }
+    clearHighlights() {
+        for (let name in this.markers) {
+            this.markers[name].setAnimation(null);
+        }
+    }
+    calculate_bounds(): google.maps.LatLngBounds {
+        const bounds = new google.maps.LatLngBounds();
+        for (let name in this.markers) {
+            if (this.markers[name].getMap()) {
+                bounds.extend(this.markers[name].getPosition());
             }
+        }
 
-            service.getDetails({ placeId: placeId }, callback);
-
-        });
-
-        //return a promise with all services resolved
-        return Promise.all([p, fs]).then(([place, fs_result]: [google.maps.places.PlaceResult, any]) => {
-            return Promise.resolve(new google.maps.InfoWindow({ content: venueInfo(place, fs_result) }));
-        });
+        return bounds;
     }
 }
 
@@ -117,34 +158,11 @@ export const viewmodel = {
             return new MapComponent($(componentInfo.element).find('#map').get(0), params);
         }
     },
-    template: `<div class="${style.map}" id="map"></div>`
+    template: `
+    <div class="${style.map}" id="map"></div>
+    <overlay-widget id="overlay" class="${style.container}" data-bind="css: {'${style.open}': overlayVisible()}" params="venue : currentVenue, visible : overlayVisible"></overlay-widget>
+    `
 };
 
 components.register('map-widget', viewmodel);
 
-function venueInfo(
-    { photos,
-        name = '',
-        formatted_address = '',
-        formatted_phone_number = '',
-        website = '',
-        rating,
-        geometry
-        
-    }: google.maps.places.PlaceResult,
-    fs_json: any): string {
-    // console.log('vinf:' + fs_json.canonicalUrl);
-    // console.log(fs_json.response.venue.canonicalUrl);
-    let fs_url = fs_json.response ? fs_json.response.venue.canonicalUrl : '';
-    // let photoUrl = photos ? photos[0].getUrl({ 'maxWidth': 196, 'maxHeight': 196 }) : '';
-    let photoUrl = streetView(geometry.location);
-    let content = `<div class="${style.popup}">
-                    <div><a href="${website}">${name}</a></div>
-                    ${photoUrl ? `<div><img src="${photoUrl}" alt=""></div>` : ``}
-                    ${rating ? `<div>${rating}</div>` : ``}
-                    <div>${formatted_phone_number}</div>
-                    <div>${formatted_address}</div>
-                    ${fs_url ? `<div><a href=${fs_url}>Foursquare link</a></div>` : ``}
-                   <div>`;
-    return content;
-}

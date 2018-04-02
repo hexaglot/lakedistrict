@@ -1,18 +1,41 @@
+.container {
+    padding : 1rem 0.5rem;
+}
+
+
+.list-container {
+
+}
+
 .list {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.selected {
-    color : red;
-    background-color: blue;
-}
-
 .input {
     width : 100%;
     font-size : 1.5rem;
-    padding : 0;
+    padding : 1rem 0.5rem;
     margin : 0;
     box-sizing: border-box;
+    height: 1em;
+}
+
+.item.selected {
+    background-color: lightgray;
+}
+
+.item {
+    padding : 0.5rem;
+    cursor: pointer;
+}
+
+.item:hover {
+    background-color: #eee;
+}
+
+.none-match {
+    margin : 1rem;
+    font-style: italic;
 }

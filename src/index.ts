@@ -1,28 +1,13 @@
 import './styles.css';
 import './components/venue-list/venueViewModel';
 import './components/app/appModel';
+import './components/overlay/overlay';
 import './components/map/map';
-import { applyBindings, observableArray } from 'knockout';
-import { Venue } from './Venue';
-import * as $ from 'jquery';
+import { applyBindings } from 'knockout';
+import { Model } from './model/model';
 
-//load venue data
-const loadVenues = fetch('data/wv.json')
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (json) {
-        return new Promise((resolve: any) => { resolve(<Venue[]>json) });
-    });
+const model = new Model();
 
-const appdata = {
-    venues: observableArray()
-};
+model.loadFromJson('data/wv.json');
 
-loadVenues.then((venues: Venue[]) => {
-    for (const v of venues) {
-        appdata.venues.push(v);
-    }
-});
-
-applyBindings(appdata);
+applyBindings(model);
