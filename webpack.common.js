@@ -4,7 +4,7 @@ const package = require('./package.json');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const extractCss = new ExtractTextPlugin({
   filename: "styles.css",
@@ -51,7 +51,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src/index.html')
     }),
-    extractCss
+    extractCss,
+    new CopyWebpackPlugin([
+      { from: 'src/data', to: 'data' }
+    ]),
   ],
   optimization: {
     splitChunks: {
