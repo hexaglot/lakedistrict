@@ -77,8 +77,8 @@ the services directory - each defines a method which returns a promise.
 
 ## Data Sources
 The official regiseterd venues were obtained from the [Cumbrian local government](https://www.cumbria.gov.uk/findmynearest/weddingvenues.asp) 
-and then filted with d3.js using a [boundry of the national park] (https://data.gov.uk/dataset/national-parks-august-2016-full-clipped-boundaries-in-great-britain3/resource/296639c1-c918-4b6e-9c6f-3efe6ed32141
-) ([after being simplified with](http://mapshaper.org/))before being put in a json file filted with jq.
+and then filted with d3.js using a [boundry of the national park](https://data.gov.uk/dataset/national-parks-august-2016-full-clipped-boundaries-in-great-britain3/resource/296639c1-c918-4b6e-9c6f-3efe6ed32141
+) ( [after being simplified with Map Shaper](http://mapshaper.org/) ) before being put in a json file filted with jq.
 
 Todos:
 - API keys abstracted to change easily
