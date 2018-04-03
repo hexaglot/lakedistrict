@@ -32,9 +32,7 @@ components.register("overlay-widget", {
         </div>
         <!-- /ko -->
         <!-- ko if: go.status() === 'failed'-->
-        <div>
-            <div>Can't load a picture</div>
-        </div>
+        <div class="${style.photoFailed}"> Photo not available.</div>
         <!-- /ko -->
 
         <div class="${style.inner}">

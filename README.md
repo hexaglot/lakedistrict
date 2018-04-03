@@ -5,15 +5,35 @@ https://data.gov.uk/dataset/national-parks-august-2016-full-clipped-boundaries-i
 http://mapshaper.org/ to simplify
 
 Todo:
- -- add image to use when nothing returned by google maps
- -- Display some warning/indication that things haven't loaded
  -- clear up gmaps.ts?
  -- comments, write readme
+ -- set up on github pages
+ -- update github
+ -- submit
+
 
 # Lake District Wedding Venues
 
 This is a google maps application to hel pyou find a registered wedding venue in
 the Lake District national park in the UK.
+
+The application uses webpack, typescript, less, knockout and jquery. Data is provieded from google maps and Foursquare API's.
+
+mention 
+- linting
+- advantages/disadvantages of typescript
+- something about webpack
+- how the data was obtained/where from
+- it fills rubric, shows when not loading through promises. 
+- mobile friendly
+- todos left
+- workign with polyfills to backport it
+
+todos
+- API keys abstracted to change easily
+- Improve the CSS
+
+
 
 To view the application go to ... .
 

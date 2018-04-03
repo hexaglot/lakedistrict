@@ -4,6 +4,7 @@
     .medium-txt;
     transition: transform, 0.2s;
     width: 100%;
+    background-color: #fff;
 
     @media @notsmall {
         max-width: 30rem;
@@ -15,9 +16,7 @@
 
     .inner {
         padding: 0.5rem 0.5rem 0.5rem 0.5rem;
-        width : 100%;
-        background-color: #fff;
-        
+        width : 100%;        
         .nav {
             display : flex;
             justify-content: space-between;
@@ -87,8 +86,8 @@
     }
 
     .photo-container {
-        background-color: #fff;
         width : 100%;
+
         .photo {
             width : 100%;
             height : 150px;
@@ -98,6 +97,11 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
+
+    }
+    
+    .photo-failed {
+        text-align: center;
     }
 }
 

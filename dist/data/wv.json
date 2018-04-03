@@ -1,0 +1,1010 @@
+[
+  {
+    "name": "Ambleside Manor",
+    "location": {
+      "lat": 54.4279997,
+      "lng": -2.9668625
+    },
+    "href": "http://www.ambleside-manor.co.uk/",
+    "phone": "015394 32062",
+    "address": "Rothay Road Ambleside LA22 0EJ",
+    "google_id": "ChIJ9Q64Zu7qfEgRlVJymCmf650",
+    "foursquare_id": null
+  },
+  {
+    "name": "Another Place The Lake",
+    "location": {
+      "lat": 54.602947,
+      "lng": -2.848913
+    },
+    "href": "https://another.place/",
+    "phone": "01768 486442",
+    "address": "Watermillock Ullswater Lake District CA11 0LP",
+    "google_id": "ChIJgxgG657lfEgRLaPs3IwGnWQ",
+    "foursquare_id": "5a0ef82358aa7f183c9df48f"
+  },
+  {
+    "name": "Armathwaite Hall Hotel",
+    "location": {
+      "lat": 54.6809682,
+      "lng": -3.2324974
+    },
+    "href": "http://www.armathwaite-hall.com/",
+    "phone": "017687 76551",
+    "address": "Bassenthwaite Lake Keswick CA12 4RE",
+    "google_id": "ChIJRxRHDmPbfEgRazVGGwqN5yc",
+    "foursquare_id": "4f060ce629c22bbeff6c24c6"
+  },
+  {
+    "name": "Askham Hall",
+    "location": {
+      "lat": 54.6073244,
+      "lng": -2.7507782
+    },
+    "href": "https://www.askhamhall.co.uk/",
+    "phone": "01931 712350",
+    "address": "Nr Penrith Askham CA10 2PF",
+    "google_id": "ChIJWfq1xvb6fEgRSoW0qEmeuRc",
+    "foursquare_id": "521c837011d2fadce8293da2"
+  },
+  {
+    "name": "Beech Hill Hotel",
+    "location": {
+      "lat": 54.32123499999999,
+      "lng": -2.94028
+    },
+    "href": "https://beechhillhotel.co.uk/",
+    "phone": "0844 502 7587",
+    "address": "Newby Bridge Road Windermere LA23 3LR",
+    "google_id": "ChIJlWZ9bdKVfEgR6GFlBILVBu0",
+    "foursquare_id": "4d34147f280e2c0fc4c858bc"
+  },
+  {
+    "name": "Belmount Hall",
+    "location": {
+      "lat": 54.3852926,
+      "lng": -2.9990533
+    },
+    "href": "https://belmounthall.com/",
+    "phone": "015394 36373",
+    "address": "Belmont Hall Outgate Ambleside LA22 0NJ",
+    "google_id": "ChIJ1U6EKeO_fEgRGw1ywQhiFvU",
+    "foursquare_id": null
+  },
+  {
+    "name": "Belsfield - Laura Ashley Hotel",
+    "location": {
+      "lat": 54.3619028,
+      "lng": -2.9211565
+    },
+    "href": "http://www.lauraashleyhotels.com/thebelsfield/",
+    "phone": "015394 42448",
+    "address": "Kendal Road Bowness-On-Windermere LA23 3EL",
+    "google_id": "ChIJEbDNPvGUfEgRmrCLXyt9hXE",
+    "foursquare_id": "4bd71f9e304fce72f81b33ab"
+  },
+  {
+    "name": "Brantwood",
+    "location": {
+      "lat": 54.35280299999999,
+      "lng": -3.059819
+    },
+    "href": "http://www.brantwood.org.uk/",
+    "phone": "015394 41396",
+    "address": "East Of Lake Coniston LA21 8AD",
+    "google_id": "ChIJPeMUkgK_fEgRa1Lyr-7kUCU",
+    "foursquare_id": "4ebe5fb929c25ce5a14f12e3"
+  },
+  {
+    "name": "Bridge Inn",
+    "location": {
+      "lat": 54.4023131,
+      "lng": -3.3725045
+    },
+    "href": "http://santonbridgeinn.com",
+    "phone": "019467 26221",
+    "address": "Bridge Inn, Santon Bridge, Holmrook, Santon Bridge CA19 1UX",
+    "google_id": "ChIJl5tYXW_KfEgRIxYRuQyOLo4",
+    "foursquare_id": "4bd72db9304fce72422e33ab"
+  },
+  {
+    "name": "Briery Wood Hotel",
+    "location": {
+      "lat": 54.3847493,
+      "lng": -2.9155766
+    },
+    "href": "https://www.lakedistrictcountryhotels.co.uk/briery-wood-hotel",
+    "phone": "015394 33316",
+    "address": "Windermere, Cumbria, LA23 1ES",
+    "google_id": "ChIJmcSveseUfEgR3L8tSjXtbwo",
+    "foursquare_id": null
+  },
+  {
+    "name": "Bristowe Hill",
+    "location": {
+      "lat": 54.607813,
+      "lng": -3.141931
+    },
+    "href": "https://bristowehill.co.uk/",
+    "phone": "7447523002",
+    "address": "Crosthwaite Road Keswick Cumbria CA12 5PG",
+    "google_id": "ChIJ1-XKZ3nbfEgRgUF93K_Sh8Q",
+    "foursquare_id": null
+  },
+  {
+    "name": "Broadoaks Country House",
+    "location": {
+      "lat": 54.402102,
+      "lng": -2.917245
+    },
+    "href": "http://www.broadoakscountryhouse.co.uk/",
+    "phone": "015394 45566",
+    "address": "Bridge Lane Troutbeck Windermere LA23 1LA",
+    "google_id": "ChIJyaUsgcmUfEgRfAoZRyiTMUA",
+    "foursquare_id": "4bd7a039304fce72cac433ab"
+  },
+  {
+    "name": "Brockhole on Windermere",
+    "location": {
+      "lat": 54.40194839999999,
+      "lng": -2.9416227
+    },
+    "href": "http://www.brockhole.co.uk/",
+    "phone": "015394 46601",
+    "address": "Brockhole on Windermere Windermere, Cumbria, LA23 1LJ",
+    "google_id": "ChIJ9xlPRSrrfEgRe7z6WvRBmhw",
+    "foursquare_id": null
+  },
+  {
+    "name": "Burnside Hotel & Spa",
+    "location": {
+      "lat": 54.36007499999999,
+      "lng": -2.921122
+    },
+    "href": "http://www.burnsidehotel.com/",
+    "phone": "015394 42211",
+    "address": "Lake Road Bowness On Windermere LA23 3HH",
+    "google_id": "ChIJv0qtefGUfEgR28CAMYkZihk",
+    "foursquare_id": "4bd71fa0304fce72fb1b33ab"
+  },
+  {
+    "name": "Castle Inn Hotel",
+    "location": {
+      "lat": 54.68362089999999,
+      "lng": -3.2196539
+    },
+    "href": "http://www.castleinncumbria.co.uk/",
+    "phone": "017687 76401",
+    "address": "Bassenthwaite, Near Keswick, The Lake District, Cumbria CA12 4RG",
+    "google_id": "ChIJGXwPabnZfEgRz7wYXR4Yv8w",
+    "foursquare_id": "4c767eb0604a3704ee7f8549"
+  },
+  {
+    "name": "Coppermines & Lakes Cottages",
+    "location": {
+      "lat": 54.3688999,
+      "lng": -3.076309
+    },
+    "href": "https://www.coppermines.co.uk/#",
+    "phone": "01539 441765",
+    "address": "The Bridge Coniston LA21 8HJ",
+    "google_id": "ChIJDSrcwRW_fEgRe48RVx8XvtU",
+    "foursquare_id": null
+  },
+  {
+    "name": "Cote How",
+    "location": {
+      "lat": 54.44597599999999,
+      "lng": -2.9823907
+    },
+    "href": "http://www.cotehow.co.uk/",
+    "phone": "015394 32765",
+    "address": "Rydal Near Ambleside Cumbria LA22 9LW",
+    "google_id": "ChIJTc0lRWHqfEgRhRPnjcU816U",
+    "foursquare_id": null
+  },
+  {
+    "name": "Cragwood Country House Hotel",
+    "location": {
+      "lat": 54.3977679,
+      "lng": -2.9403244
+    },
+    "href": "https://www.lakedistrictcountryhotels.co.uk/cragwood-hotel",
+    "phone": "015394 88177",
+    "address": "Windermere Cumbria LA23 1LQ",
+    "google_id": "ChIJYQ5GRSrrfEgRJQUlTskcUC4",
+    "foursquare_id": "4c67ce799cedd13ad53979a1"
+  },
+  {
+    "name": "Daffodil Hotel & Spa",
+    "location": {
+      "lat": 54.453755,
+      "lng": -3.0170053
+    },
+    "href": "http://www.daffodilhotel.co.uk",
+    "phone": "015394 663550",
+    "address": "By The Lake Keswick Road Grasmere Cumbria LA22 9PR",
+    "google_id": "ChIJC7DW3NrBfEgRZFWNgzmc5as",
+    "foursquare_id": "50542b96e4b0f42fb6863bac"
+  },
+  {
+    "name": "Dale Lodge Hotel",
+    "location": {
+      "lat": 54.457946,
+      "lng": -3.025445
+    },
+    "href": "http://www.dalelodgehotel.co.uk/",
+    "phone": "015394 35300",
+    "address": "Grasmere Cumbria LA22 9SW",
+    "google_id": "ChIJdfZmTMHBfEgRCAuE1RJRjOk",
+    "foursquare_id": "4ba621cff964a520d83539e3"
+  },
+  {
+    "name": "Damson Dene Hotel",
+    "location": {
+      "lat": 54.3137756,
+      "lng": -2.8846941
+    },
+    "href": "http://damsondene.co.uk/events/lake-district-wedding",
+    "phone": "015395 68676",
+    "address": "Crosthwaite Near Bowness-on-Windermere Cumbria LA8 8JE",
+    "google_id": "ChIJuWcj8wGUfEgRCN-nGrylZ3I",
+    "foursquare_id": "4bd71fa9304fce72011c33ab"
+  },
+  {
+    "name": "Derwentwater Hotel",
+    "location": {
+      "lat": 54.601959,
+      "lng": -3.158331
+    },
+    "href": "http://www.coastandcountryhotels.com/our-hotels/the-derwentwater-hotel-keswick",
+    "phone": "01768 772538",
+    "address": "Portinscale Keswick CA12 5RE",
+    "google_id": "ChIJNWXpWW3bfEgR-fBE04eudHM",
+    "foursquare_id": "4e00869db0fbdf39a4544ca8"
+  },
+  {
+    "name": "Forest Side Hotel",
+    "location": {
+      "lat": 54.463747,
+      "lng": -3.015738
+    },
+    "href": "http://www.theforestside.com/",
+    "phone": "015394 35250",
+    "address": "Keswick Road Grasmere Cumbria LA22 9RN",
+    "google_id": "ChIJe2pHUubBfEgRXsz1fDOfm9Q",
+    "foursquare_id": "4bd7b367304fce7227eb33ab"
+  },
+  {
+    "name": "Gilpin Hotel & Lake House",
+    "location": {
+      "lat": 54.3550742,
+      "lng": -2.8800639
+    },
+    "href": "http://thegilpin.co.uk/",
+    "phone": "015394 88818",
+    "address": "Crook Road Windermere Cumbria LA23 3NE",
+    "google_id": "ChIJczKNkoGTfEgRshSFtLJwE5Q",
+    "foursquare_id": "4bd72149304fce727b1e33ab"
+  },
+  {
+    "name": "Glaramara House",
+    "location": {
+      "lat": 54.5138791,
+      "lng": -3.1638795
+    },
+    "href": "http://www.glaramarahouse.co.uk/wedding",
+    "phone": "01768 77222",
+    "address": "Seatoller Borrowdale Nr Keswick Cumbria CA12 5XQ",
+    "google_id": "ChIJxcu3HVDEfEgRqolVsqBsPbg",
+    "foursquare_id": "5849b93b8f0be42a4dfe5c47"
+  },
+  {
+    "name": "Glenridding Hotel",
+    "location": {
+      "lat": 54.543642,
+      "lng": -2.948816
+    },
+    "href": "http://theglenriddinghotel.com/weddings/",
+    "phone": "017684 82228",
+    "address": "Glenridding Ullswater Penrith Cumbria CA11 0PB",
+    "google_id": "ChIJRdRywVjofEgRdXmxeIV5ZDk",
+    "foursquare_id": "4d9cc2ac48b6224b893e159f"
+  },
+  {
+    "name": "Glenridding House",
+    "location": {
+      "lat": 54.546936,
+      "lng": -2.949158
+    },
+    "href": "http://www.glenriddinghouse.com/weddings/",
+    "phone": "01768 482874",
+    "address": "Ullswater The Lake District Cumbria",
+    "google_id": "ChIJF0MDMvLofEgRQTeoIWYTIJE",
+    "foursquare_id": null
+  },
+  {
+    "name": "Hause Hall Farm",
+    "location": {
+      "lat": 54.5641046,
+      "lng": -2.8768099
+    },
+    "href": "http://www.therowleyestates.com/halls/hause-hall/",
+    "phone": "07968 258234",
+    "address": "The Hause Martindale Cumbria CA10 2NF",
+    "google_id": "ChIJ3eENdGjvfEgRRZyz0pOMjwI",
+    "foursquare_id": null
+  },
+  {
+    "name": "Hawsewater Hotel",
+    "location": {
+      "lat": 54.517535,
+      "lng": -2.799704
+    },
+    "href": "http://www.haweswaterhotel.com/",
+    "phone": "01931 713232",
+    "address": "Lakeside Road Bampton Penrith CA10 2RP",
+    "google_id": "ChIJZ_YljibufEgRePxvY47YjhU",
+    "foursquare_id": "4bd8a6f82ecdce72bde3d0f2"
+  },
+  {
+    "name": "Hillthwaite House",
+    "location": {
+      "lat": 54.37101329999999,
+      "lng": -2.9074345
+    },
+    "href": "http://www.hillthwaite.com/",
+    "phone": "015394 43636",
+    "address": "Thornbarrow Road Windermere Cumbria LA23 2DF",
+    "google_id": "ChIJxTBD55OUfEgRswjH2zrCUuE",
+    "foursquare_id": "4bd72154304fce72881e33ab"
+  },
+  {
+    "name": "Holbeck Ghyll",
+    "location": {
+      "lat": 54.4101435,
+      "lng": -2.9394854
+    },
+    "href": "https://www.holbeckghyll.com/",
+    "phone": "01539 432375",
+    "address": "Holbeck Lane Windermere LA23 1LU",
+    "google_id": "ChIJnRGKhC_rfEgRknIx2iE586w",
+    "foursquare_id": "4bd72ddc304fce72712e33ab"
+  },
+  {
+    "name": "Hundith Hill Hotel",
+    "location": {
+      "lat": 54.647332,
+      "lng": -3.331816
+    },
+    "href": "http://hundith.com/",
+    "phone": "01900 822092",
+    "address": "Lorton Vale Cockermouth Cumbria CA13 9TH",
+    "google_id": "ChIJARhh7TXRfEgR4WEqmrr2BuY",
+    "foursquare_id": "4bdedd10fe0e62b508020606"
+  },
+  {
+    "name": "Inn on the Lake",
+    "location": {
+      "lat": 54.5456021,
+      "lng": -2.9485103
+    },
+    "href": "http://www.lakedistricthotels.net/innonthelake/weddings.php",
+    "phone": "0800 840 1245",
+    "address": "Ullswater Glenridding, CA11 0PE",
+    "google_id": "ChIJRdRywVjofEgR56fj8aIavX8",
+    "foursquare_id": "4bd72107304fce723e1e33ab"
+  },
+  {
+    "name": "Irton Hall",
+    "location": {
+      "lat": 54.3927276,
+      "lng": -3.3801305
+    },
+    "href": "http://www.irtonhall.co.uk/civil-weddings.php",
+    "phone": "019467 26025",
+    "address": "Irton Eskdale Holmrook Cumbria CA19 1TA",
+    "google_id": "ChIJ-e64fn7KfEgR43j37STcR88",
+    "foursquare_id": "4c1cf4c3b9f876b0d2b77c46"
+  },
+  {
+    "name": "Kings Head",
+    "location": {
+      "lat": 54.5509,
+      "lng": -3.057486
+    },
+    "href": "http://www.lakedistrictinns.co.uk/kings-head",
+    "phone": "017687 72393",
+    "address": "Thirlspot Thirlmere Near Keswick The Lake District Cumbria CA12 4TN",
+    "google_id": "ChIJk7hMMt3CfEgRvCdctWitXIc",
+    "foursquare_id": "4fba2ee6e4b0a97c5697acbb"
+  },
+  {
+    "name": "Knipe Hall",
+    "location": {
+      "lat": 54.56907469999999,
+      "lng": -2.7480737
+    },
+    "href": "http://www.knipehall.co.uk/wedding/wedding-prices/",
+    "phone": "019317 15190",
+    "address": "Askham Penrith CA10 2PU",
+    "google_id": "ChIJybfh63zwfEgR7mP7mmWwNNc",
+    "foursquare_id": null
+  },
+  {
+    "name": "Lakeside Hotel",
+    "location": {
+      "lat": 54.27907399999999,
+      "lng": -2.956507
+    },
+    "href": "https://www.lakesidehotel.co.uk/",
+    "phone": "015395 30001",
+    "address": "Newby Bridge Ulverston LA12 8AT",
+    "google_id": "ChIJv_9I6keWfEgRs1w6BvPxVoE",
+    "foursquare_id": "4bd75c2e304fce72c67133ab"
+  },
+  {
+    "name": "Lancrigg",
+    "location": {
+      "lat": 54.4673115,
+      "lng": -3.0343685
+    },
+    "href": "http://www.lancrigg.co.uk/",
+    "phone": "015394 35317",
+    "address": "Easedale Grasmere Cumbria LA22 9QN",
+    "google_id": "ChIJJaE22urBfEgRJkWvPfaQR28",
+    "foursquare_id": "4be199678dd062b58d683e3c"
+  },
+  {
+    "name": "Langdale Chase",
+    "location": {
+      "lat": 54.407153,
+      "lng": -2.945887
+    },
+    "href": "http://www.langdalechase.co.uk/index.html",
+    "phone": "015394 32201",
+    "address": "Windermere Lake District Cumbria LA23 1LW",
+    "google_id": "ChIJWbfKsNfqfEgRsvzfo_dvUVU",
+    "foursquare_id": "4ccc26d9ee23a143a97f1ca8"
+  },
+  {
+    "name": "Langdale Hotel",
+    "location": {
+      "lat": 54.437411,
+      "lng": -3.039505
+    },
+    "href": "http://www.langdale.co.uk/langdale-hotel.html",
+    "phone": "015394 38014",
+    "address": "Great Langdale Ambleside LA22 9JD",
+    "google_id": "ChIJXeYATkzAfEgRIe8DpGa6-J4",
+    "foursquare_id": "4b792084f964a52063ec2ee3"
+  },
+  {
+    "name": "Langstrath Country Inn",
+    "location": {
+      "lat": 54.5129488,
+      "lng": -3.1399928
+    },
+    "href": "http://thelangstrath.co.uk/",
+    "phone": "017687 77239",
+    "address": "Stonethwaite Borrowdale Valley Near Keswick CA12 5XG",
+    "google_id": "ChIJX35fs2fEfEgRTZRPdzZxIz8",
+    "foursquare_id": "4de9e66445dd3993a87d8504"
+  },
+  {
+    "name": "Leathes Head Country House Hotel",
+    "location": {
+      "lat": 54.549995,
+      "lng": -3.147969
+    },
+    "href": "http://www.leatheshead.co.uk/hotel-rooms.html",
+    "phone": "01768 777247",
+    "address": "Borrowdale Keswick CA12 5UY Cumbria",
+    "google_id": "ChIJD1V3j77EfEgRaPZI13ZUVT4",
+    "foursquare_id": "5012d0f3e4b0e3a6f3ec6984"
+  },
+  {
+    "name": "Leeming House Hotel",
+    "location": {
+      "lat": 54.586856,
+      "lng": -2.865285
+    },
+    "href": "http://www.macdonaldhotels.co.uk/our-hotels/macdonald-leeming-house/",
+    "phone": "0344 879 9142",
+    "address": "Watermillock Ullswater Nr. Penrith",
+    "google_id": "ChIJZYRagujBfEgRP2I00DNhaIo",
+    "foursquare_id": "4bd79d85304fce72aec233ab"
+  },
+  {
+    "name": "Lindeth Howe Country House Hotel",
+    "location": {
+      "lat": 54.3502843,
+      "lng": -2.9233996
+    },
+    "href": "https://www.lindeth-howe.co.uk/",
+    "phone": "015394 45759",
+    "address": "Lindeth Drive Longtail Hill Bowness-on-Windermere LA23 3JF",
+    "google_id": "ChIJ2wGvsVmUfEgRBnVfqMq9j_w",
+    "foursquare_id": "4bd7213a304fce72701e33ab"
+  },
+  {
+    "name": "Lingholm Estate",
+    "location": {
+      "lat": 54.589816,
+      "lng": -3.1558498
+    },
+    "href": "http://thelingholmestate.co.uk/",
+    "phone": "017687 74238",
+    "address": "Portinscale Keswick CA12 5TZ",
+    "google_id": "ChIJWQFaLkDbfEgRyGpVx2AZbNM",
+    "foursquare_id": "552e9382498e978b40cd3942"
+  },
+  {
+    "name": "Linthwaite House",
+    "location": {
+      "lat": 54.35218949999999,
+      "lng": -2.9132304
+    },
+    "href": "http://www.linthwaitehouse.com/",
+    "phone": "015394 88600",
+    "address": "Crook Road Windermere Cumbria LA23 3JA",
+    "google_id": "ChIJVdqH5-SSfEgRuIjbC-yxRD0",
+    "foursquare_id": "4bd7694e304fce726b8433ab"
+  },
+  {
+    "name": "Lodore Falls Hotel",
+    "location": {
+      "lat": 54.5597328,
+      "lng": -3.1391628
+    },
+    "href": "https://www.lakedistricthotels.net/lodorefalls/weddings.php",
+    "phone": "0800 840 1246",
+    "address": "Borrowdale Keswick CA12 5UX",
+    "google_id": "ChIJQwD2Xn3bfEgRjUj6oZ2SD88",
+    "foursquare_id": "4cf0de03e94254813bcf66c5"
+  },
+  {
+    "name": "Longlands at Cartmel",
+    "location": {
+      "lat": 54.2106411,
+      "lng": -2.9450258
+    },
+    "href": "http://cartmel.com/",
+    "phone": "015395 36475",
+    "address": "Aynsome Road Grange-over-Sands The Lake District LA11 6HG",
+    "google_id": "ChIJNcM-FjqYfEgRCwDi3MqguLk",
+    "foursquare_id": null
+  },
+  {
+    "name": "Low Wood Bay Resort & Spa",
+    "location": {
+      "lat": 54.4103248,
+      "lng": -2.9478813
+    },
+    "href": "http://englishlakes.co.uk/low-wood-bay/#",
+    "phone": "0333 2203 105",
+    "address": "Windermere LA23 1LP",
+    "google_id": "ChIJd4h16seUfEgRpVVjb5zIJcI",
+    "foursquare_id": "4b914dadf964a52066b133e3"
+  },
+  {
+    "name": "Low Wood Hall Hotel",
+    "location": {
+      "lat": 54.4250254,
+      "lng": -3.3534667
+    },
+    "href": "http://www.lowwoodhall.co.uk/contact-us",
+    "phone": "019467 26100",
+    "address": "Nether Wasdale Cumbria CA20 1ET",
+    "google_id": "ChIJm8g1ozHKfEgR-FuXq6ulKZE",
+    "foursquare_id": "4ebc2d1393ad649fc25dddfe"
+  },
+  {
+    "name": "Merewood Country House Hotel & Restaurant",
+    "location": {
+      "lat": 54.403827,
+      "lng": -2.938108
+    },
+    "href": "https://www.lakedistrictcountryhotels.co.uk/merewood-hotel",
+    "phone": "015394 46484",
+    "address": "Windermere Cumbria LA23 1LH",
+    "google_id": "ChIJqeD-_CvrfEgR1tPddf76Sck",
+    "foursquare_id": "4c56e5492308be9a09db576c"
+  },
+  {
+    "name": "Miller Howe",
+    "location": {
+      "lat": 54.3823656,
+      "lng": -2.9179962
+    },
+    "href": "http://millerhowe.com/",
+    "phone": "015394 42536",
+    "address": "Rayrigg Road Windermere The Lake District LA23 1EY",
+    "google_id": "ChIJB37fOOqUfEgRYxirrnrQH0I",
+    "foursquare_id": null
+  },
+  {
+    "name": "Miners Arms",
+    "location": {
+      "lat": 54.22617779999999,
+      "lng": -3.3338624
+    },
+    "href": "http://minersarmssilecroft.com/",
+    "phone": "01229 772325",
+    "address": "Main Street Silecroft Cumbria LA18 5LP",
+    "google_id": "ChIJY5rO-xKyfEgRUtnT62U7k9Y",
+    "foursquare_id": "4bbb1a13cf2fc9b61f29a202"
+  },
+  {
+    "name": "Monk Coniston",
+    "location": {
+      "lat": 54.375771,
+      "lng": -3.050895
+    },
+    "href": "https://www.hfholidays.co.uk/country-houses/conistonwater/",
+    "phone": "0345 470 7558",
+    "address": "Coniston LA21 8AQ",
+    "google_id": "ChIJ0_nTE3W_fEgRHgqDdvRVGPU",
+    "foursquare_id": "4f660ccee4b02cbb8079d6b3"
+  },
+  {
+    "name": "Muncaster Castle",
+    "location": {
+      "lat": 54.3547744,
+      "lng": -3.3808802
+    },
+    "href": "http://www.muncaster.co.uk/",
+    "phone": "01229 717614",
+    "address": "Ravenglass Cumbria CA18 1RQ",
+    "google_id": "ChIJlyr9Dgi1fEgRWTAJYVvGnK4",
+    "foursquare_id": null
+  },
+  {
+    "name": "Nanny Brow",
+    "location": {
+      "lat": 54.4228848,
+      "lng": -2.988234
+    },
+    "href": "http://www.nannybrow.co.uk/",
+    "phone": "015394 33232",
+    "address": "Clappersgate Ambleside Cumbria LA22 9NF",
+    "google_id": "ChIJlTHTZpfqfEgRlpr8DR5zeEg",
+    "foursquare_id": "572b7a3dcd1000c776b33966"
+  },
+  {
+    "name": "New Dungeon Ghyll",
+    "location": {
+      "lat": 54.4489139,
+      "lng": -3.0883688
+    },
+    "href": "http://www.dungeon-ghyll.co.uk/contact.php",
+    "phone": "01539 437213",
+    "address": "Great Langdale Ne Ambleside Cumbria LA22 9JX",
+    "google_id": "ChIJmV6avtfBfEgRlT6tkptD3Q0",
+    "foursquare_id": "4cc59b061e596dcb0c14d967"
+  },
+  {
+    "name": "New House Farm",
+    "location": {
+      "lat": 54.5933266,
+      "lng": -3.3028432
+    },
+    "href": "http://newhouse-farm.com/",
+    "phone": "07841 159818",
+    "address": "Lorton Cockermouth CA13 9UU",
+    "google_id": "ChIJE5uMvbPRfEgRloLEOsDJFuM",
+    "foursquare_id": null
+  },
+  {
+    "name": "Newby Bridge Hotel",
+    "location": {
+      "lat": 54.2677709,
+      "lng": -2.971
+    },
+    "href": "http://www.newbybridgehotel.co.uk/",
+    "phone": "015395 31222",
+    "address": "Nr Ulverston Cumbria LA12 8NA",
+    "google_id": "ChIJ_YTHXS2WfEgR8WRIPYYn3wM",
+    "foursquare_id": "4d84d0a8d5fab60c1e66e99b"
+  },
+  {
+    "name": "Old England Hotel & Spa",
+    "location": {
+      "lat": 54.3638886,
+      "lng": -2.9218734
+    },
+    "href": "http://www.macdonaldhotels.co.uk/our-hotels/macdonald-old-england-hotel-spa/",
+    "phone": "03448 799144",
+    "address": "23 Church Street Cumbria LA23 3DF",
+    "google_id": "ChIJRePzMLyUfEgRjV88IMfV4Rs",
+    "foursquare_id": "4bd1c7225e0cce7289f9a184"
+  },
+  {
+    "name": "Overwater Hall",
+    "location": {
+      "lat": 54.701029,
+      "lng": -3.175193
+    },
+    "href": "http://www.overwaterhall.co.uk/",
+    "phone": "017687 76566",
+    "address": "Ireby, Cumbria, CA7 1HH",
+    "google_id": "ChIJg8mzMuPYfEgR_D2RTrSONxY",
+    "foursquare_id": "4dbd0131a86e0e98a1f238f7"
+  },
+  {
+    "name": "Paddock Barn",
+    "location": {
+      "lat": 54.3128421,
+      "lng": -2.8425951
+    },
+    "href": "",
+    "phone": "078807 63061",
+    "address": "Town Yeat Kendal LA8 8DN",
+    "google_id": "ChIJtySWe2KRfEgRlXMArsBWbc4",
+    "foursquare_id": null
+  },
+  {
+    "name": "Rothay Manor Hotel",
+    "location": {
+      "lat": 54.4265523,
+      "lng": -2.9684597
+    },
+    "href": "http://rothaymanor.co.uk/",
+    "phone": "01539 433605",
+    "address": "Ambleside Cumbria LA22 0EH",
+    "google_id": "ChIJf-xUPezqfEgRgc5ZALOHSPs",
+    "foursquare_id": "4bd71096304fce72df1b33ab"
+  },
+  {
+    "name": "Rydal Mount",
+    "location": {
+      "lat": 54.44883369999999,
+      "lng": -2.9819995
+    },
+    "href": "http://www.rydalmount.co.uk/",
+    "phone": "015394 33002",
+    "address": "Ambleside Lake District LA22 9LU",
+    "google_id": "ChIJD8rdkWbqfEgRb8UH7hpnWr4",
+    "foursquare_id": null
+  },
+  {
+    "name": "Sawrey House",
+    "location": {
+      "lat": 54.35217590000001,
+      "lng": -2.971645
+    },
+    "href": "http://www.sawreyhouse.com/#/contact-us/4536223500",
+    "phone": "015394 36387",
+    "address": "Near Sawrey Hawkshead Lake District Cumbria LA22 0LF",
+    "google_id": "ChIJDTEjap6VfEgRDjxv5pARNZU",
+    "foursquare_id": "4bd7212b304fce72621e33ab"
+  },
+  {
+    "name": "Scafell Hotel",
+    "location": {
+      "lat": 54.5232974,
+      "lng": -3.1464716
+    },
+    "href": "http://scafell.co.uk/",
+    "phone": "017687 77208",
+    "address": "Rosthwaite Borrowdale Nr Keswick Cumbria CA12 5XB",
+    "google_id": "ChIJf3uLyGHEfEgRJ7Jc6G5Xt10",
+    "foursquare_id": null
+  },
+  {
+    "name": "Sharrow Bay",
+    "location": {
+      "lat": 54.589929,
+      "lng": -2.843834
+    },
+    "href": "https://www.sharrowbay.co.uk/",
+    "phone": "01768 486301",
+    "address": "Sharrow Bay Ullswater Penrith Cumbria CA10 2LZ",
+    "google_id": "ChIJwcAwAHHlfEgRj0u_oBPX7mU",
+    "foursquare_id": "4bd72170304fce72ac1e33ab"
+  },
+  {
+    "name": "Silverholme Manor",
+    "location": {
+      "lat": 54.3097976,
+      "lng": -2.9623892
+    },
+    "href": "https://graythwaite.com/silverholme-manor/",
+    "phone": "015395 31248",
+    "address": "Graythwaite Lake District Cumbria LA12 8BA",
+    "google_id": "ChIJ-6VYpQqWfEgRLDb5UHzIRHQ",
+    "foursquare_id": null
+  },
+  {
+    "name": "Skiddaw Hotel",
+    "location": {
+      "lat": 54.6009398,
+      "lng": -3.1377997
+    },
+    "href": "https://www.lakedistricthotels.net/skiddawhotel/index.php",
+    "phone": "0800 840 1243",
+    "address": "Main Street Keswick CA12 5BL",
+    "google_id": "ChIJTeb_Q2PbfEgRiPIYtq-iri0",
+    "foursquare_id": "4bf803bd5efe2d7f9ae86934"
+  },
+  {
+    "name": "Storrs Hall",
+    "location": {
+      "lat": 54.33925,
+      "lng": -2.936083
+    },
+    "href": "https://www.storrshall.com/",
+    "phone": "01539 447111",
+    "address": "Bowness-on-Windermere Cumbria LA23 3LG",
+    "google_id": "ChIJi27EpEyUfEgRrtHgQr3NkEI",
+    "foursquare_id": "4bd7213c304fce72721e33ab"
+  },
+  {
+    "name": "Swan Hotel",
+    "location": {
+      "lat": 54.4655638,
+      "lng": -3.0200205
+    },
+    "href": "http://www.macdonaldhotels.co.uk/our-hotels/macdonald-swan-hotel/",
+    "phone": "0344 879 9120",
+    "address": "Keswick Road Grasmere LA22 9RF",
+    "google_id": "ChIJsQx1g-jBfEgR5ZFYq6E0Cdo",
+    "foursquare_id": "4bd7210e304fce72461e33ab"
+  },
+  {
+    "name": "The Punch Bowl",
+    "location": {
+      "lat": 54.3131813,
+      "lng": -2.8527655
+    },
+    "href": "http://www.the-punchbowl.co.uk/contact-us.html",
+    "phone": "015395 68237",
+    "address": "Crosthwaite Lyth Valley Cumbria LA8 8HR",
+    "google_id": "ChIJQZazG-CTfEgRGWAUzOloKHM",
+    "foursquare_id": "4c4857ac417b20a1b594e0a9"
+  },
+  {
+    "name": "The Ryebeck",
+    "location": {
+      "lat": 54.349502,
+      "lng": -2.920615
+    },
+    "href": "http://www.ryebeck.com/weddings/",
+    "phone": "015394 88195",
+    "address": "Lyth Valley Road Bowness-on-Windermere Cumbria LA23 3JP",
+    "google_id": "ChIJn_g2x1uUfEgRuF5WRkVnlSo",
+    "foursquare_id": null
+  },
+  {
+    "name": "The Samling",
+    "location": {
+      "lat": 54.4146847,
+      "lng": -2.9509058
+    },
+    "href": "http://www.thesamlinghotel.co.uk/contact-us/",
+    "phone": "015394 31922",
+    "address": "Ambleside Road Windermere Cumbria LA23 1LR",
+    "google_id": "ChIJQ1DQStnqfEgRUVt32byIgMo",
+    "foursquare_id": "4bd72150304fce72831e33ab"
+  },
+  {
+    "name": "The Swan Hotel & Spa",
+    "location": {
+      "lat": 54.26924,
+      "lng": -2.969751
+    },
+    "href": "http://www.swanhotel.com/",
+    "phone": "015395 31681",
+    "address": "Newby Bridge Cumbria LA12 8NB",
+    "google_id": "ChIJdwGCYjKWfEgRWXvZi4-Rl2U",
+    "foursquare_id": "4bc484d2920eb713e6d01e2c"
+  },
+  {
+    "name": "The Wild Boar",
+    "location": {
+      "lat": 54.35102860000001,
+      "lng": -2.8702982
+    },
+    "href": "http://englishlakes.co.uk/the-wild-boar/",
+    "phone": "015394 45225",
+    "address": "Windermere Cumbria LA23 3NF",
+    "google_id": "ChIJISUlVoOTfEgR1NyrCJ1lDnM",
+    "foursquare_id": "4bd72139304fce726e1e33ab"
+  },
+  {
+    "name": "Wasdale Head Inn",
+    "location": {
+      "lat": 54.467491,
+      "lng": -3.256849
+    },
+    "href": "http://www.wasdale.com/",
+    "phone": "019467 26229",
+    "address": "Near Gosforth Cumbria CA20 1EX",
+    "google_id": "ChIJG5bPHcLIfEgR2Ti028ka9tM",
+    "foursquare_id": "4bd35c1aa8b3a59397cc695f"
+  },
+  {
+    "name": "Waterhead Hotel",
+    "location": {
+      "lat": 54.4205287,
+      "lng": -2.9616841
+    },
+    "href": "http://englishlakes.co.uk/waterhead/",
+    "phone": "0333 2203 106",
+    "address": "Ambleside Cumbria LA22 0ER",
+    "google_id": "ChIJ6ZZVvOjqfEgReaHQqRlDlmY",
+    "foursquare_id": "4bd71094304fce72dd1b33ab"
+  },
+  {
+    "name": "Waterhead Hotel Coniston",
+    "location": {
+      "lat": 54.3683758,
+      "lng": -3.0633608
+    },
+    "href": "http://www.waterhead-hotel.co.uk/the-hotel/",
+    "phone": "015394 41244",
+    "address": "Hawkshead Road Coniston Cumbria LA21 8AJ",
+    "google_id": "ChIJlzOr7w2_fEgRUUQqHcyFiKg",
+    "foursquare_id": "4d90b02a6174a0938b89f8e3"
+  },
+  {
+    "name": "Whitewater Hotel",
+    "location": {
+      "lat": 54.2561147,
+      "lng": -2.9897108
+    },
+    "href": "http://www.whitewater-hotel.co.uk/banqueting-wedding/suites",
+    "phone": "015395 31133",
+    "address": "Lakeland Village Newby Bridge Cumbria LA12 8PX",
+    "google_id": "ChIJNakoo3y9fEgRgEuMTohbn3M",
+    "foursquare_id": "4bd7217d304fce72bd1e33ab"
+  },
+  {
+    "name": "Windermere Boat Racing Club",
+    "location": {
+      "lat": 54.3312976,
+      "lng": -2.9347338
+    },
+    "href": "http://www.wmbrc.co.uk/weddings_and_events",
+    "phone": "015394 43284",
+    "address": "Broad Leys Ghyll Head Newby Bridge Road Bowness on Windermere Cumbria LA23 3 LJ",
+    "google_id": "ChIJt0D4FTWUfEgRivTTfTvgIyo",
+    "foursquare_id": "4df1de5ee4cda09e6d9c4483"
+  },
+  {
+    "name": "Windermere Hotel",
+    "location": {
+      "lat": 54.3800694,
+      "lng": -2.9065948
+    },
+    "href": "https://www.coastandcountryhotels.com",
+    "phone": "01539 442251",
+    "address": "Kendal Road Windermere LA23 1AL",
+    "google_id": "ChIJt5oV0r2UfEgR2gLfnk8sjy4",
+    "foursquare_id": "4bcf5fb30ffdce721068b2c0"
+  },
+  {
+    "name": "Windermere Hydro Hotel",
+    "location": {
+      "lat": 54.3654529,
+      "lng": -2.915230900000001
+    },
+    "href": "https://squirehotels.co.uk/windermere/",
+    "phone": "01539 444455",
+    "address": "Helm Road Bowness-on-Windermere Windermere LA23 3BA",
+    "google_id": "ChIJYUKakfKUfEgRD3HflKThiQ0",
+    "foursquare_id": "4ecb6621b6346e2d39a489c2"
+  },
+  {
+    "name": "Wordsworth Hotel & Spa",
+    "location": {
+      "lat": 54.4583581,
+      "lng": -3.0236006
+    },
+    "href": "http://thewordsworthhotel.co.uk/contact/",
+    "phone": "015394 35592",
+    "address": "Grasmere Lake District Cumbria LA22 9SW",
+    "google_id": "ChIJ5Qq6u8PBfEgRAKsOAzEXfzE",
+    "foursquare_id": "4e15b7d48877cd5712102f6c"
+  }
+]
