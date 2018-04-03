@@ -13,6 +13,9 @@ different sizes and gives user feedback when services don't load.
 The application uses webpack, typescript, less, knockout and jquery.
 Data is provided by google maps and Foursquare API's.
 
+
+All html, css, javascript (apart from libraries) and images are my own work. 
+
 ## Typescript
 
 Typescript was used to gain extra quality checks and as an opportunity to learn
