@@ -2,7 +2,7 @@
 
 [View the app](https://hexaglot.github.io/lakedistrict/dist/)
 
-To run the application locally use ```npm run start``` for a local development server.
+To run the application locally run ```npm install``` and then ```npm run start``` for a local development server.
 
 Use ```npm run build``` to run the production build. All files will be found in dist/.
 
